@@ -6,10 +6,10 @@ class Node:
 class LinkedList:
     def __init__(self):
         self.head = None
-    
+
     def print_LL(self):
         if self.head is None:
-            print("the linked list is empty")
+            print("the ll is empty")
 
         else:
             n = self.head
