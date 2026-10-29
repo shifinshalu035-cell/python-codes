@@ -10,35 +10,38 @@ class LinkedList:
     def print_ll(self):
         if self.head is None:
             print("your node is empty")
-            return "none"
 
         else:
             n = self.head
             while n is not None:
                 print(n.data)
-                n = n . ref
-
+                n = n.ref
     def add_at_the_bigining(self,data):
         new_Node = Node(data)
         new_Node.ref = self.head
         self.head = new_Node
+        return self.head
 
-    
     def add_at_the_end(self,data):
         new_Node = Node(data)
         if self.head is None:
-            self.head = new_Node
+            print("the node is emty in this case")
+            return "noun"
         else:
-             n = self.head
-             while n.ref is not None:
-                n=n.ref
-             n.ref = new_Node
-ll1 = LinkedList()
-ll1.add_at_the_bigining(80)
-ll1.add_at_the_bigining(70)
-ll1.add_at_the_end(90)
-ll1.add_at_the_end(100)
-ll1.print_ll()
+            n = self.head
+            while n.ref is not None:
+                n = n.ref
+            n.ref = new_Node
+            return self.head
+    def remove_at_the_big(self):
+     if self.head is None:
+        print("the list is empty")
+        return
+    self.head =self.head.ref
 
+sll = LinkedList()
+sll.add_at_the_bigining(90)
+sll.add_at_the_end(900)
+sll.remove_at_the_big()
 
-
+sll.print_ll()
