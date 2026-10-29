@@ -34,10 +34,11 @@ class LinkedList:
             n.ref = new_Node
             return self.head
     def remove_at_the_big(self):
-     if self.head is None:
-        print("the list is empty")
-        return
-    self.head =self.head.ref
+        if self.head is None:
+            print("the node is empty")
+            return
+        self.head = self.head.ref
+        
 
 sll = LinkedList()
 sll.add_at_the_bigining(90)
